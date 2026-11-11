@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    RodentFlow.Core — everything the Windows app needs that is neither the Swift engine nor the
+    model runtime: video reading, the frame preparation the pose models expect, and the tracking
+    loop. Deliberately free of NuGet dependencies so it builds and can be tested anywhere.
+  -->
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <AssemblyName>RodentFlow.Core</AssemblyName>
+    <RootNamespace>RodentFlow.Core</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RodentFlow.Engine\RodentFlow.Engine.csproj" />
+  </ItemGroup>
+
+</Project>

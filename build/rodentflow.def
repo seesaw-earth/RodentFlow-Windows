@@ -1,0 +1,30 @@
+; rodentflow.def — the C entry points of RodentFlowABI.dll.
+;
+; Generated from the @_cdecl names in engine/Sources/RodentFlowABI/ABI/*.swift.
+; build\build_engine.ps1 links with this only if the DLL comes out without its exports.
+; Regenerate with:  python check\make_def.py
+
+LIBRARY RodentFlowABI
+EXPORTS
+    rf_analyze
+    rf_catalogue
+    rf_default_setup
+    rf_group_analysis
+    rf_identity_segments
+    rf_marble_plan
+    rf_move_handle
+    rf_plan_run
+    rf_run_close
+    rf_run_filter
+    rf_run_finish
+    rf_run_frame
+    rf_run_open
+    rf_run_progress
+    rf_set_language
+    rf_setup_view
+    rf_string_free
+    rf_swap_identity
+    rf_track_frames
+    rf_track_info
+    rf_translate
+    rf_version

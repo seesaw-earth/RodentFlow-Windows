@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    RodentFlow.SelfCheck — checks of the parts of the Windows app that are pure arithmetic, so they
+    can be run anywhere, without the engine DLL, a model or a video. No NuGet dependencies, so this
+    also serves as the smoke test on a machine that has only the .NET SDK.
+
+      dotnet run (in this folder)
+  -->
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <AssemblyName>RodentFlow.SelfCheck</AssemblyName>
+    <RootNamespace>RodentFlow.SelfCheck</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\RodentFlow.Core\RodentFlow.Core.csproj" />
+  </ItemGroup>
+
+</Project>

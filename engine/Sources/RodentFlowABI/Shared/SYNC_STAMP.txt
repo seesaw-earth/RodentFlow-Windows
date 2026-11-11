@@ -1,0 +1,4 @@
+source: RodentFlow-2.1 shell (README: iOS build 20 / Mac build 16 + group build 23/19)
+synced: 2026-11-10T14:50:54Z
+files: 63
+sha256 of concatenated sources: e019585468280bb372cd55b8e41417a30b68d6768113606c4bd1866366cd12bc

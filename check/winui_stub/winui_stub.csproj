@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Compiles the window's C# against WinUIStubs.cs (NOT the real WinUI). See WinUIStubs.cs. -->
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <OutputType>Library</OutputType>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <NoWarn>CS0169;CS0649</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="WinUIStubs.cs" />
+    <Compile Include="OnnxStub.cs" />
+    <Compile Include="obj/MainWindow.xaml.g.cs" />
+    <Compile Include="../../src/RodentFlow.App/MainWindow.xaml.cs" />
+    <Compile Include="../../src/RodentFlow.App/MainViewModel.cs" />
+    <Compile Include="../../src/RodentFlow.App/AppSettings.cs" />
+    <ProjectReference Include="../../src/RodentFlow.Core/RodentFlow.Core.csproj" />
+  </ItemGroup>
+</Project>

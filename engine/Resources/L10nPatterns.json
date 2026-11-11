@@ -1,0 +1,972 @@
+[
+  {
+    "regex": "^所有距离和速度以体长（BL）为单位：每只鼠的体长为行走时（0\\.7–4\\ BL/s、与另一只鼠相距\\ >\\ 2\\ BL）颈到尾根距离的中位数（resident\\ ([\\s\\S]*?)\\ ([\\s\\S]*?)，intruder\\ ([\\s\\S]*?)\\ ([\\s\\S]*?)）；两鼠间距除以平均体长。相对速度为两鼠速度向量之差的模。$",
+    "translation": "All distances and speeds are in body lengths (BL): each mouse's body length is its median neck → tail base distance while walking (0.7–4 BL/s, > 2 BL from the other mouse) (resident {0} {1}, intruder {2} {3}); inter-animal distances are divided by the mean body length. Relative speed is the magnitude of the difference of the two velocity vectors.",
+    "source": "所有距离和速度以体长（BL）为单位：每只鼠的体长为行走时（0.7–4 BL/s、与另一只鼠相距 > 2 BL）颈到尾根距离的中位数（resident {0} {1}，intruder {2} {3}）；两鼠间距除以平均体长。相对速度为两鼠速度向量之差的模。"
+  },
+  {
+    "regex": "^攻击：身体中心距离\\ <\\ ([\\s\\S]*?)\\ BL（或重叠成一个检测），且\\ 0\\.33\\ s\\ 窗口内平均速度\\ >\\ ([\\s\\S]*?)\\ BL/s、相对速度\\ >\\ ([\\s\\S]*?)\\ BL/s\\ 或体轴角速度\\ >\\ ([\\s\\S]*?)°/s，持续\\ ≥\\ ([\\s\\S]*?)\\ s；不区分发起者。扭打为攻击中两鼠都在动、整体位移速度\\ <\\ 平均速度一半、持续\\ ≥\\ ([\\s\\S]*?)\\ s\\ 的部分。$",
+    "translation": "Attack: body-center distance < {0} BL (or the mice merged into one detection) with, in a 0.33 s window, mean speed > {1} BL/s and relative speed > {2} BL/s or body-axis rotation > {3}°/s, lasting ≥ {4} s; the initiator is not judged. Clinch is the part of an attack where both mice move while the pair moves at < half their mean speed, lasting ≥ {5} s.",
+    "source": "攻击：身体中心距离 < {0} BL（或重叠成一个检测），且 0.33 s 窗口内平均速度 > {1} BL/s、相对速度 > {2} BL/s 或体轴角速度 > {3}°/s，持续 ≥ {4} s；不区分发起者。扭打为攻击中两鼠都在动、整体位移速度 < 平均速度一半、持续 ≥ {5} s 的部分。"
+  },
+  {
+    "regex": "^追逐：resident\\ 速度\\ >\\ ([\\s\\S]*?)\\ BL/s、intruder\\ 速度\\ >\\ ([\\s\\S]*?)\\ BL/s，resident\\ 朝\\ intruder\\ 移动、intruder\\ 沿同一方向远离，间距\\ 0\\.5–5\\ BL，持续\\ ≥\\ ([\\s\\S]*?)\\ s。压制：两鼠贴近，resident\\ 关键点清楚可见而\\ intruder\\ 的关键点被遮挡且几乎不动，持续\\ ≥\\ ([\\s\\S]*?)\\ s，且在攻击或追逐结束后\\ 5\\ s\\ 内开始。$",
+    "translation": "Chase: resident speed > {0} BL/s and intruder speed > {1} BL/s, the resident moving toward the intruder and the intruder moving away in the same direction, 0.5–5 BL apart, lasting ≥ {2} s. Keep down: mice in contact, the resident's keypoints clearly visible while the intruder's are occluded and it barely moves, lasting ≥ {3} s and starting within 5 s after an attack or chase.",
+    "source": "追逐：resident 速度 > {0} BL/s、intruder 速度 > {1} BL/s，resident 朝 intruder 移动、intruder 沿同一方向远离，间距 0.5–5 BL，持续 ≥ {2} s。压制：两鼠贴近，resident 关键点清楚可见而 intruder 的关键点被遮挡且几乎不动，持续 ≥ {3} s，且在攻击或追逐结束后 5 s 内开始。"
+  },
+  {
+    "regex": "^侧身威胁：resident\\ 体轴与两鼠连线成\\ 55–125°，以侧向为主朝\\ intruder\\ 移动，间距\\ 0\\.5–2\\.4\\ BL，持续\\ ≥\\ ([\\s\\S]*?)\\ s。直立：颈到尾根距离\\ <\\ ([\\s\\S]*?)\\ ×\\ 体长、身体中心几乎不动、面向近处的另一只鼠，持续\\ ≥\\ 0\\.3\\ s（resident\\ 记为攻击性直立，intruder\\ 记为防御性直立）。骑跨：两鼠体轴同向（<\\ 35°），resident\\ 位于\\ intruder\\ 后上方，持续\\ ≥\\ ([\\s\\S]*?)\\ s。$",
+    "translation": "Lateral threat: resident body axis at 55–125° to the line between the mice, moving mainly sideways toward the intruder, 0.5–2.4 BL apart, lasting ≥ {0} s. Upright: neck → tail base distance < {1} × body length, body center nearly still, facing the other mouse at close range, lasting ≥ 0.3 s (aggressive upright for the resident, defensive upright for the intruder). Mounting: body axes aligned (< 35°), the resident behind and over the intruder, lasting ≥ {2} s.",
+    "source": "侧身威胁：resident 体轴与两鼠连线成 55–125°，以侧向为主朝 intruder 移动，间距 0.5–2.4 BL，持续 ≥ {0} s。直立：颈到尾根距离 < {1} × 体长、身体中心几乎不动、面向近处的另一只鼠，持续 ≥ 0.3 s（resident 记为攻击性直立，intruder 记为防御性直立）。骑跨：两鼠体轴同向（< 35°），resident 位于 intruder 后上方，持续 ≥ {2} s。"
+  },
+  {
+    "regex": "^嗅探：鼻尖到对方鼻尖或尾根\\ <\\ ([\\s\\S]*?)\\ BL，不含打斗时段；跟随：两鼠都在移动（>\\ 0\\.4\\ BL/s）、resident\\ 朝\\ intruder\\ 移动、间距\\ <\\ 2\\.7\\ BL，持续\\ ≥\\ 0\\.5\\ s，且不属于追逐。$",
+    "translation": "Sniffing: nose to the other mouse's nose or tail base < {0} BL, excluding attacks. Following: both mice moving (> 0.4 BL/s), the resident moving toward the intruder, < 2.7 BL apart, lasting ≥ 0.5 s, and not a chase.",
+    "source": "嗅探：鼻尖到对方鼻尖或尾根 < {0} BL，不含打斗时段；跟随：两鼠都在移动（> 0.4 BL/s）、resident 朝 intruder 移动、间距 < 2.7 BL，持续 ≥ 0.5 s，且不属于追逐。"
+  },
+  {
+    "regex": "^居住者–入侵者测试：resident\\ =\\ ([\\s\\S]*?)、intruder\\ =\\ ([\\s\\S]*?)（([\\s\\S]*?)）；intruder\\ 放入时间\\ ([\\s\\S]*?)\\ s，测试时长\\ ([\\s\\S]*?)\\ s，所有指标从放入开始计算。$",
+    "translation": "Resident–intruder test: resident = {0}, intruder = {1} ({2}); the intruder was introduced at {3} s and the test lasted {4} s; all measures start at the introduction.",
+    "source": "居住者–入侵者测试：resident = {0}、intruder = {1}（{2}）；intruder 放入时间 {3} s，测试时长 {4} s，所有指标从放入开始计算。"
+  },
+  {
+    "regex": "^鼻–鼻接触：鼻尖距离\\ <\\ ([\\s\\S]*?)\\ cm；肛殖区嗅探：鼻尖到对方尾根\\ <\\ ([\\s\\S]*?)\\ cm；身体嗅探：鼻尖到对方身体中心\\ <\\ ([\\s\\S]*?)\\ cm；跟随：间距\\ <\\ ([\\s\\S]*?)\\ cm、两鼠速度\\ >\\ ([\\s\\S]*?)\\ cm/s、跟随者朝向对方\\ ±([\\s\\S]*?)°，持续\\ ≥\\ ([\\s\\S]*?)\\ s。$",
+    "translation": "Nose-to-nose contact: nose distance < {0} cm; anogenital sniffing: nose to partner tail base < {1} cm; body sniffing: nose to partner body center < {2} cm; following: distance < {3} cm, both speeds > {4} cm/s and follower faces partner within ±{5}° for ≥ {6} s.",
+    "source": "鼻–鼻接触：鼻尖距离 < {0} cm；肛殖区嗅探：鼻尖到对方尾根 < {1} cm；身体嗅探：鼻尖到对方身体中心 < {2} cm；跟随：间距 < {3} cm、两鼠速度 > {4} cm/s、跟随者朝向对方 ±{5}°，持续 ≥ {6} s。"
+  },
+  {
+    "regex": "^姿态由\\ RodentFlow（YOLO\\ pose，6\\ 个关键点：鼻尖、左耳、右耳、颈部、身体中心、尾根）在设备上([\\s\\S]*?)识别([\\s\\S]*?)；置信度\\ <\\ ([\\s\\S]*?)\\ 的关键点视为缺失，≤\\ ([\\s\\S]*?)\\ s\\ 的缺失做线性插值，并以\\ ([\\s\\S]*?)\\ s\\ 滑动平均平滑。$",
+    "translation": "Pose was estimated on-device with RodentFlow (YOLO pose, six keypoints: nose, left/right ears, neck, body center, tail base) on {0}{1}. Keypoints with confidence < {2} were treated as missing; gaps ≤ {3} s were linearly interpolated, followed by a {4} s moving-average smoothing window.",
+    "source": "姿态由 RodentFlow（YOLO pose，6 个关键点：鼻尖、左耳、右耳、颈部、身体中心、尾根）在设备上{0}识别{1}；置信度 < {2} 的关键点视为缺失，≤ {3} s 的缺失做线性插值，并以 {4} s 滑动平均平滑。"
+  },
+  {
+    "regex": "^每\\ ([\\s\\S]*?)\\ 帧取一帧$",
+    "translation": "one frame in every {0}",
+    "source": "每 {0} 帧取一帧"
+  },
+  {
+    "regex": "^探头：鼻尖越出开放臂边缘（距臂轴\\ ≤\\ ([\\s\\S]*?)\\ cm）而身体仍在中央区或开放臂，持续\\ ≥\\ ([\\s\\S]*?)\\ s；伸展评估姿势：鼻尖–尾根长度\\ ≥\\ 中位数\\ ×\\ ([\\s\\S]*?)\\ 且身体中心速度\\ <\\ ([\\s\\S]*?)\\ cm/s，持续\\ ≥\\ ([\\s\\S]*?)\\ s。$",
+    "translation": "Head dip: nose projects beyond an open-arm edge (within {0} cm of the arm axis) while the body remains on the maze for ≥ {1} s. SAP: nose-to-tail-base length ≥ median × {2}, with body speed < {3} cm/s for ≥ {4} s.",
+    "source": "探头：鼻尖越出开放臂边缘（距臂轴 ≤ {0} cm）而身体仍在中央区或开放臂，持续 ≥ {1} s；伸展评估姿势：鼻尖–尾根长度 ≥ 中位数 × {2} 且身体中心速度 < {3} cm/s，持续 ≥ {4} s。"
+  },
+  {
+    "regex": "^反应定义为刺激后速度首次超过\\ max\\(([\\s\\S]*?)\\ ×\\ 刺激前\\ ([\\s\\S]*?)\\ s\\ 平均速度,\\ ([\\s\\S]*?)\\ cm/s\\)；有反应且\\ ([\\s\\S]*?)\\ s\\ 内回到巢穴记为逃跑（参考\\ Yilmaz\\ \\&\\ Meister,\\ 2013）。$",
+    "translation": "Response onset is the first post-stimulus speed above max({0} × mean speed over the preceding {1} s, {2} cm/s). A responding trial reaching shelter within {3} s is classified as escape (after Yilmaz & Meister, 2013).",
+    "source": "反应定义为刺激后速度首次超过 max({0} × 刺激前 {1} s 平均速度, {2} cm/s)；有反应且 {3} s 内回到巢穴记为逃跑（参考 Yilmaz & Meister, 2013）。"
+  },
+  {
+    "regex": "^每次从起始臂经过选择点（半径\\ ([\\s\\S]*?)\\ cm）进入左\\ /\\ 右臂记为一次选择；IdPhi\\ 为期间头朝向变化绝对值之和，在会话内\\ z\\ 标准化，zIdPhi\\ ≥\\ ([\\s\\S]*?)\\ 记为\\ VTE。$",
+    "translation": "A choice is recorded when the animal moves from the start arm through a choice point (radius {0} cm) into the left or right arm. IdPhi sums absolute head-direction changes, is z-scored within session, and zIdPhi ≥ {1} is labeled VTE.",
+    "source": "每次从起始臂经过选择点（半径 {0} cm）进入左 / 右臂记为一次选择；IdPhi 为期间头朝向变化绝对值之和，在会话内 z 标准化，zIdPhi ≥ {1} 记为 VTE。"
+  },
+  {
+    "regex": "^身体轴向为尾根\\ →\\ 颈部向量；对展开后的角度分方向累计，每转过完整\\ 360°\\ 记一圈，反向回转超过\\ 90°\\ 时该方向重新计数。俯拍时画面逆时针对应动物左转([\\s\\S]*?)。$",
+    "translation": "Body heading is the tail-base-to-neck vector. Complete 360° turns are counted separately by direction; a reversal > 90° restarts accumulation. In overhead footage, image counterclockwise corresponds to animal left turning{0}.",
+    "source": "身体轴向为尾根 → 颈部向量；对展开后的角度分方向累计，每转过完整 360° 记一圈，反向回转超过 90° 时该方向重新计数。俯拍时画面逆时针对应动物左转{0}。"
+  },
+  {
+    "regex": "^头朝向为两耳中点\\ →\\ 鼻尖向量的方向（鼻尖或两耳缺失时用颈部\\ →\\ 鼻尖）；([\\s\\S]*?)。角速度\\ AHV\\ 为展开后头朝向的中心差分。占据按\\ ([\\s\\S]*?)°\\ 分格累计停留时间。$",
+    "translation": "Head direction is the ear-midpoint-to-nose vector (fallback neck-to-nose if ears or nose unavailable); {0}. AHV is the central difference of unwrapped head direction. Occupancy summed in {1}° bins.",
+    "source": "头朝向为两耳中点 → 鼻尖向量的方向（鼻尖或两耳缺失时用颈部 → 鼻尖）；{0}。角速度 AHV 为展开后头朝向的中心差分。占据按 {1}° 分格累计停留时间。"
+  },
+  {
+    "regex": "^互动区为网罩周围\\ ([\\s\\S]*?)\\ ×\\ ([\\s\\S]*?)\\ cm\\ 区域，角落区为对侧\\ ([\\s\\S]*?)\\ ×\\ ([\\s\\S]*?)\\ cm；按身体中心判断（Golden\\ et\\ al\\.,\\ 2011）。$",
+    "translation": "Interaction zone: {0} × {1} cm around the enclosure; opposite corner zones: {2} × {3} cm. Classified using body center (Golden et al., 2011).",
+    "source": "互动区为网罩周围 {0} × {1} cm 区域，角落区为对侧 {2} × {3} cm；按身体中心判断（Golden et al., 2011）。"
+  },
+  {
+    "regex": "^嗅探定义为鼻尖距杯子外缘\\ ≤\\ ([\\s\\S]*?)\\ cm、头朝向（两耳中点\\ →\\ 鼻尖）与杯子方向夹角\\ ≤\\ ([\\s\\S]*?)°，且身体中心不在杯子上；箱室归属按身体中心判断。$",
+    "translation": "Investigation: nose within {0} cm of cup edge, head-to-cup angle ≤ {1}° (ear midpoint → nose), and body center not on cup; chamber determined by body center.",
+    "source": "嗅探定义为鼻尖距杯子外缘 ≤ {0} cm、头朝向（两耳中点 → 鼻尖）与杯子方向夹角 ≤ {1}°，且身体中心不在杯子上；箱室归属按身体中心判断。"
+  },
+  {
+    "regex": "^探洞定义为鼻尖进入洞口（半径\\ ([\\s\\S]*?)\\ cm\\ \\+\\ ([\\s\\S]*?)\\ cm）持续\\ ≥\\ ([\\s\\S]*?)\\ s；错误为探入非目标洞，同一洞\\ 0\\.2\\ s\\ 内的连续探入合并为一次。$",
+    "translation": "Hole investigation requires the nose to enter a hole region (radius {0} cm + {1} cm) for ≥ {2} s. Non-target holes count as errors; repeat probes of the same hole within 0.2 s are merged.",
+    "source": "探洞定义为鼻尖进入洞口（半径 {0} cm + {1} cm）持续 ≥ {2} s；错误为探入非目标洞，同一洞 0.2 s 内的连续探入合并为一次。"
+  },
+  {
+    "regex": "^物体探索定义为鼻尖距物体外缘（半径\\ ([\\s\\S]*?)\\ cm）≤\\ ([\\s\\S]*?)\\ cm、头朝向与物体方向夹角\\ ≤\\ ([\\s\\S]*?)°，且身体中心不在物体上（排除攀爬）。$",
+    "translation": "Object investigation requires nose within {1} cm of an object edge (radius {0} cm), orientation to object ≤ {2}°, and body center off the object (excluding climbing).",
+    "source": "物体探索定义为鼻尖距物体外缘（半径 {0} cm）≤ {1} cm、头朝向与物体方向夹角 ≤ {2}°，且身体中心不在物体上（排除攀爬）。"
+  },
+  {
+    "regex": "^僵直定义为鼻尖、两耳中点、身体中心和尾根在\\ 0\\.5\\ s\\ 窗口内的平均位移速度\\ <\\ ([\\s\\S]*?)\\ cm/s，且持续\\ ≥\\ ([\\s\\S]*?)\\ s。$",
+    "translation": "Freezing defined as mean displacement speed of nose, ear midpoint, body center and tail base < {0} cm/s in a 0.5 s window, sustained ≥ {1} s.",
+    "source": "僵直定义为鼻尖、两耳中点、身体中心和尾根在 0.5 s 窗口内的平均位移速度 < {0} cm/s，且持续 ≥ {1} s。"
+  },
+  {
+    "regex": "^模型加载失败：([\\s\\S]*?)。请确认\\ ([\\s\\S]*?)\\.mlpackage\\ 在\\ RodentFlow\\ 工程资源中并已加入\\ App\\ target。$",
+    "translation": "Failed to load model: {0}. Confirm that {1}.mlpackage is in the RodentFlow project resources and included in the App target.",
+    "source": "模型加载失败：{0}。请确认 {1}.mlpackage 在 RodentFlow 工程资源中并已加入 App target。"
+  },
+  {
+    "regex": "^占据图按\\ ([\\s\\S]*?)\\ ([\\s\\S]*?)\\ 方格累计身体中心停留时间；运动时段定义为身体中心速度\\ >\\ ([\\s\\S]*?)\\ ([\\s\\S]*?)/s。$",
+    "translation": "Occupancy map sums body-center dwell time in {0} {1} bins; movement defined as body-center speed > {2} {3}/s.",
+    "source": "占据图按 {0} {1} 方格累计身体中心停留时间；运动时段定义为身体中心速度 > {2} {3}/s。"
+  },
+  {
+    "regex": "^约\\ ([\\s\\S]*?)\\ 帧需要识别。分析时间段（例如只看前\\ 5\\ 分钟）可以在“标定”页随时调整，不需要重新识别。$",
+    "translation": "Approximately {0} frames will be processed. You can adjust the analysis window (e.g., the first 5 minutes) in Calibration without rerunning detection.",
+    "source": "约 {0} 帧需要识别。分析时间段（例如只看前 5 分钟）可以在“标定”页随时调整，不需要重新识别。"
+  },
+  {
+    "regex": "^所在箱按身体中心判断；探头为鼻尖进入明箱而身体中心和尾根仍在暗箱，持续\\ ≥\\ ([\\s\\S]*?)\\ s。$",
+    "translation": "Compartment assigned by body center; head poke requires the nose to enter the light side while body center and tail base remain dark for ≥ {0} s.",
+    "source": "所在箱按身体中心判断；探头为鼻尖进入明箱而身体中心和尾根仍在暗箱，持续 ≥ {0} s。"
+  },
+  {
+    "regex": "^还没有同一编号的“([\\s\\S]*?)”阶段结果；分析完另一阶段后会自动计算\\ SI\\ ratio。$",
+    "translation": "No matching “{0}” phase for this subject yet; the SI ratio will be computed after the other phase is analyzed.",
+    "source": "还没有同一编号的“{0}”阶段结果；分析完另一阶段后会自动计算 SI ratio。"
+  },
+  {
+    "regex": "^中央区为场地中心\\ ([\\s\\S]*?)%（按边长）区域，按身体中心判断。$",
+    "translation": "Center zone is the central {0}% of arena side length; based on body center.",
+    "source": "中央区为场地中心 {0}%（按边长）区域，按身体中心判断。"
+  },
+  {
+    "regex": "^彩色点为探索时的鼻尖位置；虚线圈为\\ ([\\s\\S]*?)\\ cm\\ 判定范围$",
+    "translation": "Colored points mark nose positions during object investigation; dashed rings indicate the {0} cm distance criterion.",
+    "source": "彩色点为探索时的鼻尖位置；虚线圈为 {0} cm 判定范围"
+  },
+  {
+    "regex": "^关键点运动\\ <\\ ([\\s\\S]*?)\\ ([\\s\\S]*?)/s\\ 持续\\ ≥\\ ([\\s\\S]*?)\\ s$",
+    "translation": "Keypoint movement < {0} {1}/s for ≥ {2} s",
+    "source": "关键点运动 < {0} {1}/s 持续 ≥ {2} s"
+  },
+  {
+    "regex": "^([\\s\\S]*?)\\ ·\\ ([\\s\\S]*?)\\ 的视频、姿态数据和结果都会被删除。$",
+    "translation": "Videos, pose data and results for {0} · {1} will be deleted.",
+    "source": "{0} · {1} 的视频、姿态数据和结果都会被删除。"
+  },
+  {
+    "regex": "^每次刺激后\\ ([\\s\\S]*?)\\ s\\ 的轨迹；箭头为刺激时的头朝向$",
+    "translation": "Trajectories during {0} s after each stimulus; arrows show head orientation at onset.",
+    "source": "每次刺激后 {0} s 的轨迹；箭头为刺激时的头朝向"
+  },
+  {
+    "regex": "^停留\\ ≥\\ ([\\s\\S]*?)\\ s\\ 的\\ ([\\s\\S]*?)\\ ([\\s\\S]*?)\\ 方格比例$",
+    "translation": "Fraction of {1} {2} bins with occupancy ≥ {0} s",
+    "source": "停留 ≥ {0} s 的 {1} {2} 方格比例"
+  },
+  {
+    "regex": "^zIdPhi\\ ≥\\ ([\\s\\S]*?)；至少\\ 3\\ 次选择才计算$",
+    "translation": "zIdPhi ≥ {0}; requires at least 3 choices",
+    "source": "zIdPhi ≥ {0}；至少 3 次选择才计算"
+  },
+  {
+    "regex": "^停留\\ ≥\\ ([\\s\\S]*?)\\ s\\ 的\\ ([\\s\\S]*?)°\\ 方向格比例$",
+    "translation": "Fraction of {1}° directional bins with occupancy ≥ {0} s",
+    "source": "停留 ≥ {0} s 的 {1}° 方向格比例"
+  },
+  {
+    "regex": "^约\\ ([\\s\\S]*?)\\ 帧\\ ·\\ ([\\s\\S]*?)\\ ·\\ ([\\s\\S]*?)([\\s\\S]*?)$",
+    "translation": "About {0} frames · {1} · {2}{3}",
+    "source": "约 {0} 帧 · {1} · {2}{3}"
+  },
+  {
+    "regex": "^\\(([\\s\\S]*?)\\ −\\ ([\\s\\S]*?)\\)\\ ÷\\ 总嗅探时间$",
+    "translation": "({0} − {1}) / total investigation time",
+    "source": "({0} − {1}) ÷ 总嗅探时间"
+  },
+  {
+    "regex": "^([\\s\\S]*?)\\ 帧\\ ·\\ 平均\\ ([\\s\\S]*?)\\ ms/帧$",
+    "translation": "{0} frames · average {1} ms/frame",
+    "source": "{0} 帧 · 平均 {1} ms/帧"
+  },
+  {
+    "regex": "^身体中心停留时间；方格\\ ([\\s\\S]*?)\\ ([\\s\\S]*?)$",
+    "translation": "Body-center occupancy, cell size {0} {1}",
+    "source": "身体中心停留时间；方格 {0} {1}"
+  },
+  {
+    "regex": "^每\\ ([\\s\\S]*?)\\ 一个点；阴影为\\ CS$",
+    "translation": "One point per {0}; shaded regions are CS events",
+    "source": "每 {0} 一个点；阴影为 CS"
+  },
+  {
+    "regex": "^每\\ ([\\s\\S]*?)（横轴单位\\ min）$",
+    "translation": "Every {0} (x-axis in min)",
+    "source": "每 {0}（横轴单位 min）"
+  },
+  {
+    "regex": "^身体中心间距\\ <\\ ([\\s\\S]*?)\\ cm$",
+    "translation": "Body-center distance < {0} cm",
+    "source": "身体中心间距 < {0} cm"
+  },
+  {
+    "regex": "^速度\\ >\\ ([\\s\\S]*?)\\ ([\\s\\S]*?)/s$",
+    "translation": "Speed > {0} {1}/s",
+    "source": "速度 > {0} {1}/s"
+  },
+  {
+    "regex": "^速度\\ >\\ ([\\s\\S]*?)\\ ([\\s\\S]*?)/s$",
+    "translation": "Speed > {0} {1}/s",
+    "source": "速度 > {0} {1}/s"
+  },
+  {
+    "regex": "^([\\s\\S]*?)\\ ·\\ 剩余\\ ([\\s\\S]*?)$",
+    "translation": "{0} · {1} remaining",
+    "source": "{0} · 剩余 {1}"
+  },
+  {
+    "regex": "^姿态数据保存失败：([\\s\\S]*?)$",
+    "translation": "Failed to save pose data: {0}",
+    "source": "姿态数据保存失败：{0}"
+  },
+  {
+    "regex": "^CS\\ 时长\\ ([\\s\\S]*?)\\ s$",
+    "translation": "CS duration {0} s",
+    "source": "CS 时长 {0} s"
+  },
+  {
+    "regex": "^每\\ ([\\s\\S]*?)\\ 的移动距离$",
+    "translation": "Distance traveled per {0}",
+    "source": "每 {0} 的移动距离"
+  },
+  {
+    "regex": "^第\\ ([\\s\\S]*?)\\ 步：([\\s\\S]*?)$",
+    "translation": "Step {0}: {1}",
+    "source": "第 {0} 步：{1}"
+  },
+  {
+    "regex": "^实时预览\\ ·\\ ([\\s\\S]*?)$",
+    "translation": "Live preview · {0}",
+    "source": "实时预览 · {0}"
+  },
+  {
+    "regex": "^导出汇总表（([\\s\\S]*?)）$",
+    "translation": "Export summary ({0})",
+    "source": "导出汇总表（{0}）"
+  },
+  {
+    "regex": "^正在识别\\ ·\\ ([\\s\\S]*?)$",
+    "translation": "Analyzing · {0}",
+    "source": "正在识别 · {0}"
+  },
+  {
+    "regex": "^\\ ·\\ 组别\\ ([\\s\\S]*?)$",
+    "translation": " · group {0}",
+    "source": " · 组别 {0}"
+  },
+  {
+    "regex": "^累计\\ ([\\s\\S]*?)\\ 曲线$",
+    "translation": "Cumulative {0} curve",
+    "source": "累计 {0} 曲线"
+  },
+  {
+    "regex": "^置信度\\ ≥\\ ([\\s\\S]*?)$",
+    "translation": "Confidence ≥ {0}",
+    "source": "置信度 ≥ {0}"
+  },
+  {
+    "regex": "^CS([\\s\\S]*?)\\ 僵直$",
+    "translation": "Freezing during CS{0}",
+    "source": "CS{0} 僵直"
+  },
+  {
+    "regex": "^保存失败：([\\s\\S]*?)$",
+    "translation": "Save failed: {0}",
+    "source": "保存失败：{0}"
+  },
+  {
+    "regex": "^全部\\ ([\\s\\S]*?)\\ 个$",
+    "translation": "All {0} assays",
+    "source": "全部 {0} 个"
+  },
+  {
+    "regex": "^单位\\ ([\\s\\S]*?)/s$",
+    "translation": "Units: {0}/s",
+    "source": "单位 {0}/s"
+  },
+  {
+    "regex": "^回看\\ ·\\ ([\\s\\S]*?)$",
+    "translation": "Review · {0}",
+    "source": "回看 · {0}"
+  },
+  {
+    "regex": "^导入失败：([\\s\\S]*?)$",
+    "translation": "Import failed: {0}",
+    "source": "导入失败：{0}"
+  },
+  {
+    "regex": "^约\\ ([\\s\\S]*?)\\ 分钟$",
+    "translation": "About {0} min",
+    "source": "约 {0} 分钟"
+  },
+  {
+    "regex": "^臂\\ ([\\s\\S]*?)\\ 时间$",
+    "translation": "Arm {0} time",
+    "source": "臂 {0} 时间"
+  },
+  {
+    "regex": "^识别失败：([\\s\\S]*?)$",
+    "translation": "Detection failed: {0}",
+    "source": "识别失败：{0}"
+  },
+  {
+    "regex": "^([\\s\\S]*?)探索次数$",
+    "translation": "{0} investigation bouts",
+    "source": "{0}探索次数"
+  },
+  {
+    "regex": "^([\\s\\S]*?)探索次数$",
+    "translation": "{0} investigation bouts",
+    "source": "{0}探索次数"
+  },
+  {
+    "regex": "^([\\s\\S]*?)嗅探次数$",
+    "translation": "{0} sniffing bouts",
+    "source": "{0}嗅探次数"
+  },
+  {
+    "regex": "^([\\s\\S]*?)嗅探次数$",
+    "translation": "{0} sniffing bouts",
+    "source": "{0}嗅探次数"
+  },
+  {
+    "regex": "^([\\s\\S]*?)\\ 次分析$",
+    "translation": "{0} analyses",
+    "source": "{0} 次分析"
+  },
+  {
+    "regex": "^开放臂\\ ([\\s\\S]*?)$",
+    "translation": "Open arm {0}",
+    "source": "开放臂 {0}"
+  },
+  {
+    "regex": "^每\\ ([\\s\\S]*?)\\ 帧$",
+    "translation": "Every {0} frames",
+    "source": "每 {0} 帧"
+  },
+  {
+    "regex": "^约\\ ([\\s\\S]*?)\\ 秒$",
+    "translation": "About {0} sec",
+    "source": "约 {0} 秒"
+  },
+  {
+    "regex": "^进入臂\\ ([\\s\\S]*?)$",
+    "translation": "Entry into arm {0}",
+    "source": "进入臂 {0}"
+  },
+  {
+    "regex": "^闭合臂\\ ([\\s\\S]*?)$",
+    "translation": "Closed arm {0}",
+    "source": "闭合臂 {0}"
+  },
+  {
+    "regex": "^首次嗅探([\\s\\S]*?)$",
+    "translation": "First sniff of {0}",
+    "source": "首次嗅探{0}"
+  },
+  {
+    "regex": "^首次嗅探([\\s\\S]*?)$",
+    "translation": "First sniff of {0}",
+    "source": "首次嗅探{0}"
+  },
+  {
+    "regex": "^首次探索([\\s\\S]*?)$",
+    "translation": "First investigation of {0}",
+    "source": "首次探索{0}"
+  },
+  {
+    "regex": "^首次探索([\\s\\S]*?)$",
+    "translation": "First investigation of {0}",
+    "source": "首次探索{0}"
+  },
+  {
+    "regex": "^([\\s\\S]*?)侧箱室$",
+    "translation": "{0}-side chamber",
+    "source": "{0}侧箱室"
+  },
+  {
+    "regex": "^([\\s\\S]*?)侧箱室$",
+    "translation": "{0}-side chamber",
+    "source": "{0}侧箱室"
+  },
+  {
+    "regex": "^占用\\ ([\\s\\S]*?)$",
+    "translation": "Using {0}",
+    "source": "占用 {0}"
+  },
+  {
+    "regex": "^手柄\\ ([\\s\\S]*?)$",
+    "translation": "Handle {0}",
+    "source": "手柄 {0}"
+  },
+  {
+    "regex": "^版本\\ ([\\s\\S]*?)$",
+    "translation": "Version {0}",
+    "source": "版本 {0}"
+  },
+  {
+    "regex": "^物体\\ ([\\s\\S]*?)$",
+    "translation": "Object {0}",
+    "source": "物体 {0}"
+  },
+  {
+    "regex": "^编号\\ ([\\s\\S]*?)$",
+    "translation": "Subject {0}",
+    "source": "编号 {0}"
+  },
+  {
+    "regex": "^进入([\\s\\S]*?)侧$",
+    "translation": "Entries on {0} side",
+    "source": "进入{0}侧"
+  },
+  {
+    "regex": "^进入([\\s\\S]*?)侧$",
+    "translation": "Entries on {0} side",
+    "source": "进入{0}侧"
+  },
+  {
+    "regex": "^([\\s\\S]*?)\\ 帧$",
+    "translation": "{0} frames",
+    "source": "{0} 帧"
+  },
+  {
+    "regex": "^([\\s\\S]*?)有效$",
+    "translation": "Valid {0}",
+    "source": "{0}有效"
+  },
+  {
+    "regex": "^([\\s\\S]*?)\\ 次$",
+    "translation": "{0} events",
+    "source": "{0} 次"
+  },
+  {
+    "regex": "^嗅探([\\s\\S]*?)$",
+    "translation": "Sniffing {0}",
+    "source": "嗅探{0}"
+  },
+  {
+    "regex": "^嗅探([\\s\\S]*?)$",
+    "translation": "Sniffing {0}",
+    "source": "嗅探{0}"
+  },
+  {
+    "regex": "^帧\\ ([\\s\\S]*?)$",
+    "translation": "Frame {0}",
+    "source": "帧 {0}"
+  },
+  {
+    "regex": "^探索([\\s\\S]*?)$",
+    "translation": "Investigating {0}",
+    "source": "探索{0}"
+  },
+  {
+    "regex": "^探索([\\s\\S]*?)$",
+    "translation": "Investigating {0}",
+    "source": "探索{0}"
+  },
+  {
+    "regex": "^新\\ ([\\s\\S]*?)$",
+    "translation": "Novel {0}",
+    "source": "新 {0}"
+  },
+  {
+    "regex": "^旧\\ ([\\s\\S]*?)$",
+    "translation": "Familiar {0}",
+    "source": "旧 {0}"
+  },
+  {
+    "regex": "^臂\\ ([\\s\\S]*?)$",
+    "translation": "Arm {0}",
+    "source": "臂 {0}"
+  },
+  {
+    "regex": "^臂\\ ([\\s\\S]*?)$",
+    "translation": "Arm {0}",
+    "source": "臂 {0}"
+  },
+  {
+    "regex": "^([\\s\\S]*?)侧$",
+    "translation": "{0} side",
+    "source": "{0}侧"
+  },
+  {
+    "regex": "^([\\s\\S]*?)侧$",
+    "translation": "{0} side",
+    "source": "{0}侧"
+  },
+  {
+    "regex": "^双鼠模型加载失败：([\\s\\S]*?)。双鼠模式暂用单鼠模型。$",
+    "translation": "Failed to load the two-mouse model: {0}. Two-mouse mode uses the single-mouse model for now.",
+    "source": "双鼠模型加载失败：{0}。双鼠模式暂用单鼠模型。"
+  },
+  {
+    "regex": "^姿态由\\ RodentPose（YOLO\\ pose，6\\ 个关键点：鼻尖、左耳、右耳、颈部、身体中心、尾根）在设备上([\\s\\S]*?)识别([\\s\\S]*?)；置信度\\ <\\ ([\\s\\S]*?)\\ 的关键点视为缺失，≤\\ ([\\s\\S]*?)\\ s\\ 的缺失做线性插值，并以\\ ([\\s\\S]*?)\\ s\\ 滑动平均平滑。$",
+    "translation": "Pose was estimated on-device with RodentPose (YOLO pose, six keypoints: nose, left/right ears, neck, body center, tail base) using {0} sampling{1}. Keypoints with confidence < {2} were treated as missing; gaps ≤ {3} s were linearly interpolated, followed by a {4} s moving-average smoothing window.",
+    "source": "姿态由 RodentPose（YOLO pose，6 个关键点：鼻尖、左耳、右耳、颈部、身体中心、尾根）在设备上{0}识别{1}；置信度 < {2} 的关键点视为缺失，≤ {3} s 的缺失做线性插值，并以 {4} s 滑动平均平滑。"
+  },
+  {
+    "regex": "^模型加载失败：([\\s\\S]*?)。请确认\\ ([\\s\\S]*?)\\.mlpackage\\ 在\\ RodentPose\\ 文件夹中并已加入\\ App\\ target。$",
+    "translation": "Failed to load model: {0}. Confirm that {1}.mlpackage is in the RodentPose folder and included in the App target.",
+    "source": "模型加载失败：{0}。请确认 {1}.mlpackage 在 RodentPose 文件夹中并已加入 App target。"
+  },
+  {
+    "regex": "^([\\s\\S]*?)\\ 超出标定范围$",
+    "translation": "{0} outside the calibrated arena",
+    "source": "{0} 超出标定范围"
+  },
+  {
+    "regex": "^([\\s\\S]*?)\\ 鼠有\\ ([\\s\\S]*?)%\\ 的帧（([\\s\\S]*?)\\ 段，共\\ ([\\s\\S]*?)\\ s）追踪位置超出标定范围（身体中心在场地边缘外\\ >\\ ([\\s\\S]*?)\\ cm）。可能是把场地外的物体误认成了这只鼠，也可能是它离开了场地。请在回看中检查时间轴上标出的片段；逐帧数据的\\ ([\\s\\S]*?)\\ 列已标出这些帧，结果未作修改。$",
+    "translation": "Mouse {0}: in {1}% of the frames ({2} episodes, {3} s in total) the tracked position is outside the calibrated arena (body center more than {4} cm beyond the arena's edge). Something outside the arena may have been taken for this mouse, or it left the arena. Check the marked episodes on the review timeline; these frames are flagged in the {5} column of the frame-by-frame data, and the results were not changed.",
+    "source": "{0} 鼠有 {1}% 的帧（{2} 段，共 {3} s）追踪位置超出标定范围（身体中心在场地边缘外 > {4} cm）。可能是把场地外的物体误认成了这只鼠，也可能是它离开了场地。请在回看中检查时间轴上标出的片段；逐帧数据的 {5} 列已标出这些帧，结果未作修改。"
+  },
+  {
+    "regex": "^([\\s\\S]*?)\\ 只动物有结果$",
+    "translation": "{0} animals have results",
+    "source": "{0} 只动物有结果"
+  },
+  {
+    "regex": "^使用组别\\ ([\\s\\S]*?)$",
+    "translation": "Use group {0}",
+    "source": "使用组别 {0}"
+  },
+  {
+    "regex": "^分析时间段内身体中心的停留时间；方格\\ ([\\s\\S]*?)\\ ([\\s\\S]*?)$",
+    "translation": "Time the body centre spent in each cell during the analysis window; cells {0} {1}",
+    "source": "分析时间段内身体中心的停留时间；方格 {0} {1}"
+  },
+  {
+    "regex": "^另有\\ ([\\s\\S]*?)\\ 个未完成，在“数据”中查看$",
+    "translation": "{0} more unfinished sessions in Data",
+    "source": "另有 {0} 个未完成，在“数据”中查看"
+  },
+  {
+    "regex": "^只把标定场地四周外扩\\ ([\\s\\S]*?)%\\ 的矩形区域（画面的\\ ([\\s\\S]*?)%）交给模型，区域外的画面不参与识别。$",
+    "translation": "Only a rectangle around the calibrated arena, enlarged by {0}% ({1}% of the frame), was passed to the model; the picture outside it was not analysed.",
+    "source": "只把标定场地四周外扩 {0}% 的矩形区域（画面的 {1}%）交给模型，区域外的画面不参与识别。"
+  },
+  {
+    "regex": "^只有\\ ([\\s\\S]*?)%\\ 的帧同时检出两只鼠；双鼠贴近或重叠时可能漏检或身份交换。$",
+    "translation": "Both mice were detected in only {0}% of frames; close contact or overlap can cause missed detections or identity swaps.",
+    "source": "只有 {0}% 的帧同时检出两只鼠；双鼠贴近或重叠时可能漏检或身份交换。"
+  },
+  {
+    "regex": "^向量长度\\ ([\\s\\S]*?)$",
+    "translation": "Vector length {0}",
+    "source": "向量长度 {0}"
+  },
+  {
+    "regex": "^场地范围（画面的\\ ([\\s\\S]*?)%）$",
+    "translation": "Arena region ({0}% of the frame)",
+    "source": "场地范围（画面的 {0}%）"
+  },
+  {
+    "regex": "^头朝向占据明显不均匀（平均向量长度\\ ([\\s\\S]*?)），计算调谐曲线时务必按占据归一化。$",
+    "translation": "Head-direction occupancy is nonuniform (mean vector length {0}); normalize tuning curves by occupancy.",
+    "source": "头朝向占据明显不均匀（平均向量长度 {0}），计算调谐曲线时务必按占据归一化。"
+  },
+  {
+    "regex": "^平均方向\\ ([\\s\\S]*?)°$",
+    "translation": "Mean direction {0}°",
+    "source": "平均方向 {0}°"
+  },
+  {
+    "regex": "^总探索时间\\ ([\\s\\S]*?)\\ s，不足\\ 20\\ s（许多研究以此作为纳入标准）。$",
+    "translation": "Total investigation time {0} s was below 20 s (an inclusion criterion used by some studies).",
+    "source": "总探索时间 {0} s，不足 20 s（许多研究以此作为纳入标准）。"
+  },
+  {
+    "regex": "^方向覆盖度只有\\ ([\\s\\S]*?)%：部分方向采样不足，调谐曲线在这些方向上不可靠。$",
+    "translation": "Directional coverage is only {0}%; tuning curves may be unreliable in undersampled directions.",
+    "source": "方向覆盖度只有 {0}%：部分方向采样不足，调谐曲线在这些方向上不可靠。"
+  },
+  {
+    "regex": "^有\\ ([\\s\\S]*?)%\\ 的帧（([\\s\\S]*?)\\ 段，共\\ ([\\s\\S]*?)\\ s）追踪位置超出标定范围（身体中心在场地边缘外\\ >\\ ([\\s\\S]*?)\\ cm）。可能是把场地外的物体误认成了动物，也可能是动物离开了场地。请在回看中检查时间轴上标出的“超出标定范围”片段；逐帧数据的\\ outside_arena\\ 列已标出这些帧，结果未作修改。$",
+    "translation": "In {0}% of the frames ({1} episodes, {2} s in total) the tracked position is outside the calibrated arena (body center more than {3} cm beyond the arena's edge). Something outside the arena may have been taken for the animal, or the animal left the arena. Check the “Outside the calibrated arena” episodes on the review timeline; these frames are flagged in the outside_arena column of the frame-by-frame data, and the results were not changed.",
+    "source": "有 {0}% 的帧（{1} 段，共 {2} s）追踪位置超出标定范围（身体中心在场地边缘外 > {3} cm）。可能是把场地外的物体误认成了动物，也可能是动物离开了场地。请在回看中检查时间轴上标出的“超出标定范围”片段；逐帧数据的 outside_arena 列已标出这些帧，结果未作修改。"
+  },
+  {
+    "regex": "^有\\ ([\\s\\S]*?)\\ 处体型\\ /\\ 活动量提示\\ A\\ /\\ B\\ 可能交换，已在回看时间轴“疑似交换”中标出，建议优先核对。$",
+    "translation": "At {0} places, body size / activity suggest that A / B may be swapped; they are marked “Likely swap” on the review timeline and are worth checking first.",
+    "source": "有 {0} 处体型 / 活动量提示 A / B 可能交换，已在回看时间轴“疑似交换”中标出，建议优先核对。"
+  },
+  {
+    "regex": "^有\\ ([\\s\\S]*?)\\ 次身份判定把握较低，已在回看时间轴“身份待核对”中标出；区分\\ A\\ /\\ B\\ 的指标请先核对这些时刻（在回看中可一键交换\\ A\\ /\\ B）。$",
+    "translation": "{0} identity decisions have low confidence and are marked “Check identity” on the review timeline; check these moments before using A / B-specific measures (A / B can be swapped with one tap in the review).",
+    "source": "有 {0} 次身份判定把握较低，已在回看时间轴“身份待核对”中标出；区分 A / B 的指标请先核对这些时刻（在回看中可一键交换 A / B）。"
+  },
+  {
+    "regex": "^有\\ ([\\s\\S]*?)\\ 段身份经人工在回看中确认或更正。$",
+    "translation": "{0} identity segments were confirmed or corrected manually in the review.",
+    "source": "有 {0} 段身份经人工在回看中确认或更正。"
+  },
+  {
+    "regex": "^有效范围\\ ([\\s\\S]*?)–([\\s\\S]*?)，已按边界值计算$",
+    "translation": "Valid range {0}–{1}; the nearest limit is used",
+    "source": "有效范围 {0}–{1}，已按边界值计算"
+  },
+  {
+    "regex": "^检出率只有\\ ([\\s\\S]*?)%：结果可能偏差较大。请检查光照、遮挡，或在回看中确认。$",
+    "translation": "Detection rate is only {0}%; results may be biased. Check lighting and occlusions, and review the pose overlay.",
+    "source": "检出率只有 {0}%：结果可能偏差较大。请检查光照、遮挡，或在回看中确认。"
+  },
+  {
+    "regex": "^比例约\\ ([\\s\\S]*?)\\ 像素\\ /\\ cm$",
+    "translation": "Scale ≈ {0} pixels/cm",
+    "source": "比例约 {0} 像素 / cm"
+  },
+  {
+    "regex": "^热图不透明度\\ ([\\s\\S]*?)%$",
+    "translation": "Heat map opacity {0}%",
+    "source": "热图不透明度 {0}%"
+  },
+  {
+    "regex": "^覆盖度\\ ([\\s\\S]*?)%：场地部分区域采样不足，放电野可能不完整。$",
+    "translation": "Coverage is {0}%; undersampled zones can produce incomplete spatial firing maps.",
+    "source": "覆盖度 {0}%：场地部分区域采样不足，放电野可能不完整。"
+  },
+  {
+    "regex": "^身体中心（未检出时用可信关键点的平均位置）超出标定场地边缘\\ >\\ ([\\s\\S]*?)\\ cm\\ 的帧标记为“超出标定范围”（逐帧数据\\ outside_arena\\ 列；outside_arena_dist_cm\\ 为超出的距离）。这些帧只作标记，轨迹和各项指标均未修改。$",
+    "translation": "Frames in which the tracked body center (or, when it was not found, the mean of the confident keypoints) lies more than {0} cm beyond the edge of the calibrated arena are flagged as “outside the calibrated arena” (column outside_arena of the frame-by-frame data; outside_arena_dist_cm gives the distance). These frames are only flagged; neither the trajectory nor any measure was changed.",
+    "source": "身体中心（未检出时用可信关键点的平均位置）超出标定场地边缘 > {0} cm 的帧标记为“超出标定范围”（逐帧数据 outside_arena 列；outside_arena_dist_cm 为超出的距离）。这些帧只作标记，轨迹和各项指标均未修改。"
+  },
+  {
+    "regex": "^以原平台为中心、半径\\ ([\\s\\S]*?)\\ cm\\ 的区域$",
+    "translation": "Zone of radius {0} cm around the former platform",
+    "source": "以原平台为中心、半径 {0} cm 的区域"
+  },
+  {
+    "regex": "^身体中心到达平台并停留\\ ≥\\ ([\\s\\S]*?)\\ s；未找到时记为试次时长$",
+    "translation": "Body center reaches the platform and stays ≥ {0} s; the trial length if not found",
+    "source": "身体中心到达平台并停留 ≥ {0} s；未找到时记为试次时长"
+  },
+  {
+    "regex": "^在\\ ([\\s\\S]*?)\\ s\\ 内没有找到平台：潜伏期记为试次时长，路径和策略按整个试次计算。$",
+    "translation": "The platform was not found within {0} s: the latency is the trial length, and the path and strategy cover the whole trial.",
+    "source": "在 {0} s 内没有找到平台：潜伏期记为试次时长，路径和策略按整个试次计算。"
+  },
+  {
+    "regex": "^漂浮时间占\\ ([\\s\\S]*?)%：漂浮是非认知因素，会拉长潜伏期；请核对，或按实验室标准考虑排除。$",
+    "translation": "Floating takes {0}% of the trial: floating is a non-cognitive factor that lengthens the latency; please check, or consider exclusion by your lab's criteria.",
+    "source": "漂浮时间占 {0}%：漂浮是非认知因素，会拉长潜伏期；请核对，或按实验室标准考虑排除。"
+  },
+  {
+    "regex": "^贴壁时间占\\ ([\\s\\S]*?)%：贴壁（多见于最初几次训练或焦虑样表型）会拉长潜伏期，与空间记忆没有直接关系。$",
+    "translation": "Thigmotaxis takes {0}% of the trial: wall-hugging (common in the first training trials or with anxiety-like phenotypes) lengthens the latency and is not directly related to spatial memory.",
+    "source": "贴壁时间占 {0}%：贴壁（多见于最初几次训练或焦虑样表型）会拉长潜伏期，与空间记忆没有直接关系。"
+  },
+  {
+    "regex": "^探索测试（平台已撤去）分析整个分析时间段，位置用身体中心（缺失时用两耳中点或鼻尖）。象限以原平台为中心划分（目标象限为原平台方向\\ ±45°）；平台区半径\\ ([\\s\\S]*?)\\ cm；穿越次数按进入原平台范围（半径\\ ([\\s\\S]*?)\\ cm）计数。$",
+    "translation": "The probe test (platform removed) was analysed over the whole analysis window using the body center (ear midpoint or nose when missing). Quadrants were centered on the former platform (target quadrant = former platform direction ±45°); the platform zone had a radius of {0} cm; crossings were counted as entries into the former platform area (radius {1} cm).",
+    "source": "探索测试（平台已撤去）分析整个分析时间段，位置用身体中心（缺失时用两耳中点或鼻尖）。象限以原平台为中心划分（目标象限为原平台方向 ±45°）；平台区半径 {0} cm；穿越次数按进入原平台范围（半径 {1} cm）计数。"
+  },
+  {
+    "regex": "^位置用身体中心（缺失时用两耳中点或鼻尖）。平台半径\\ ([\\s\\S]*?)\\ cm；身体中心进入平台半径\\ \\+\\ ([\\s\\S]*?)\\ cm\\ 并停留\\ ≥\\ ([\\s\\S]*?)\\ s\\ 记为找到平台。潜伏期从分析起点（入水）算起，未找到时记为试次时长；路程、游速和其他指标只统计找到平台之前的部分。$",
+    "translation": "Position was the body center (ear midpoint or nose when missing). Platform radius {0} cm; the platform counted as found when the body center came within the platform radius + {1} cm and stayed ≥ {2} s. Latency was measured from the analysis start (release) and set to the trial length when the platform was not found; path, speed and the other measures cover the swim before the platform was found.",
+    "source": "位置用身体中心（缺失时用两耳中点或鼻尖）。平台半径 {0} cm；身体中心进入平台半径 + {1} cm 并停留 ≥ {2} s 记为找到平台。潜伏期从分析起点（入水）算起，未找到时记为试次时长；路程、游速和其他指标只统计找到平台之前的部分。"
+  },
+  {
+    "regex": "^平均距离为到平台中心距离的时间加权平均（Gallagher\\ 指标）；累计搜索误差为按\\ 1\\ s\\ 分段的平均距离之和，减去以同样平均速度从入水点直线游向平台的理想值。贴壁为距池壁\\ ≤\\ ([\\s\\S]*?)\\ cm，漂浮为速度\\ <\\ ([\\s\\S]*?)\\ cm/s\\ 持续\\ ≥\\ ([\\s\\S]*?)\\ s。$",
+    "translation": "Mean proximity is the time-weighted mean distance to the platform center (Gallagher measure); the cumulative search error is the sum of 1-s mean distances minus the ideal of swimming straight from the release point to the platform at the same mean speed. Thigmotaxis: ≤ {0} cm from the wall; floating: speed < {1} cm/s for ≥ {2} s.",
+    "source": "平均距离为到平台中心距离的时间加权平均（Gallagher 指标）；累计搜索误差为按 1 s 分段的平均距离之和，减去以同样平均速度从入水点直线游向平台的理想值。贴壁为距池壁 ≤ {0} cm，漂浮为速度 < {1} cm/s 持续 ≥ {2} s。"
+  },
+  {
+    "regex": "^截止时间（([\\s\\S]*?)\\ s）内没有进入暗室：潜伏期记为截止时间。比较组间潜伏期时请看组间页的生存分析。$",
+    "translation": "No entry into the dark side before the cut-off ({0} s): the latency is the cut-off. Compare latencies between groups with the survival analysis on the group page.",
+    "source": "截止时间（{0} s）内没有进入暗室：潜伏期记为截止时间。比较组间潜伏期时请看组间页的生存分析。"
+  },
+  {
+    "regex": "^进入暗室按([\\s\\S]*?)判断；截止时间为分析时长\\ ([\\s\\S]*?)\\ s，截止前没有进入时潜伏期记为截止时间并标为未进入（右删失）。反向探头为鼻尖伸进暗室而身体中心和尾根仍在明室，持续\\ ≥\\ ([\\s\\S]*?)\\ s。$",
+    "translation": "Entry into the dark side was judged by {0}; the cut-off was the analysis length of {1} s, and without an entry before it the latency was set to the cut-off and flagged as not entered (right-censored). A reverse probe was the nose in the dark side while the body center and tail base stayed in the light side for ≥ {2} s.",
+    "source": "进入暗室按{0}判断；截止时间为分析时长 {1} s，截止前没有进入时潜伏期记为截止时间并标为未进入（右删失）。反向探头为鼻尖伸进暗室而身体中心和尾根仍在明室，持续 ≥ {2} s。"
+  },
+  {
+    "regex": "^配对\\ /\\ 刺激侧为画面([\\s\\S]*?)。所在侧按([\\s\\S]*?)判断，只有进入另一侧后才计为换边（卡在门口不计穿越）。$",
+    "translation": "The paired / stimulated side was the {0} of the image. The side was judged by {1}, and a side change counted only once the other side was entered (sitting in the doorway is not a crossing).",
+    "source": "配对 / 刺激侧为画面{0}。所在侧按{1}判断，只有进入另一侧后才计为换边（卡在门口不计穿越）。"
+  },
+  {
+    "regex": "^只有\\ ([\\s\\S]*?)%\\ 的时间能确定所在侧：请检查标定和分界位置。$",
+    "translation": "The side is known for only {0}% of the time: check the calibration and the divider position.",
+    "source": "只有 {0}% 的时间能确定所在侧：请检查标定和分界位置。"
+  },
+  {
+    "regex": "^这次分析来自更新版本的\\ RodentFlow（任务\\ ([\\s\\S]*?)），当前版本无法分析它。请更新\\ App；已有的结果和数据都保留。$",
+    "translation": "This analysis comes from a newer RodentFlow (task {0}) and cannot be analysed by this version. Please update the app; the existing results and data are kept.",
+    "source": "这次分析来自更新版本的 RodentFlow（任务 {0}），当前版本无法分析它。请更新 App；已有的结果和数据都保留。"
+  },
+  {
+    "regex": "^截止时间（([\\s\\S]*?)\\ s）内没有进食：潜伏期记为截止时间。比较组间潜伏期时请看组间页的生存分析。$",
+    "translation": "No feeding before the cut-off ({0} s): the latency is the cut-off. Compare latencies between groups with the survival analysis on the group page.",
+    "source": "截止时间（{0} s）内没有进食：潜伏期记为截止时间。比较组间潜伏期时请看组间页的生存分析。"
+  },
+  {
+    "regex": "^食物区为以\\ F\\ 为中心、半径\\ ([\\s\\S]*?)\\ cm\\ 的圆，接近为鼻尖进入食物区。候选进食为鼻尖在食物区、身体中心速度\\ <\\ ([\\s\\S]*?)\\ cm/s\\ 且持续\\ ≥\\ ([\\s\\S]*?)\\ s，只用于提示；进食潜伏期以回看中人工确认的第一口为准。截止时间为分析时长\\ ([\\s\\S]*?)\\ s，截止前未进食记为截止时间并标为未进食（右删失）。$",
+    "translation": "The food zone was a circle of radius {0} cm around F; an approach was the nose entering it. Candidate feeding (nose in the food zone, body-center speed < {1} cm/s for ≥ {2} s) was only a hint; the latency to feed was the first bite confirmed by hand in the review. The cut-off was the analysis length of {3} s; without a bite before it the latency was set to the cut-off and flagged as not eaten (right-censored).",
+    "source": "食物区为以 F 为中心、半径 {0} cm 的圆，接近为鼻尖进入食物区。候选进食为鼻尖在食物区、身体中心速度 < {1} cm/s 且持续 ≥ {2} s，只用于提示；进食潜伏期以回看中人工确认的第一口为准。截止时间为分析时长 {3} s，截止前未进食记为截止时间并标为未进食（右删失）。"
+  },
+  {
+    "regex": "^头探：身体中心在开放段，鼻尖越出跑道内缘或外缘\\ ([\\s\\S]*?)–([\\s\\S]*?)\\ cm，持续\\ ≥\\ ([\\s\\S]*?)\\ s（内缘、外缘分别计数）。闭合段探出：身体中心和尾根在闭合段，鼻尖越过边界进入开放段，持续\\ ≥\\ ([\\s\\S]*?)\\ s，0\\.5\\ s\\ 内接着进入开放段的不计。伸展评估姿势：鼻尖–尾根长度\\ ≥\\ 中位数\\ ×\\ ([\\s\\S]*?)\\ 且身体中心速度\\ <\\ ([\\s\\S]*?)\\ cm/s，持续\\ ≥\\ ([\\s\\S]*?)\\ s；朝向开放段指鼻尖比身体中心更靠近所在闭合段的边界。$",
+    "translation": "Head dip: body center in an open segment and the nose {0}–{1} cm beyond the inner or outer edge of the track for ≥ {2} s (inner and outer edge counted separately). Closed-segment peek: body center and tail base in a closed segment with the nose across the boundary in an open segment for ≥ {3} s; peeks followed by an open entry within 0.5 s were not counted. Stretched-attend posture: nose–tail-base length ≥ median × {4} with body-center speed < {5} cm/s for ≥ {6} s; “toward an open segment” means the nose was closer than the body center to a boundary of its closed segment.",
+    "source": "头探：身体中心在开放段，鼻尖越出跑道内缘或外缘 {0}–{1} cm，持续 ≥ {2} s（内缘、外缘分别计数）。闭合段探出：身体中心和尾根在闭合段，鼻尖越过边界进入开放段，持续 ≥ {3} s，0.5 s 内接着进入开放段的不计。伸展评估姿势：鼻尖–尾根长度 ≥ 中位数 × {4} 且身体中心速度 < {5} cm/s，持续 ≥ {6} s；朝向开放段指鼻尖比身体中心更靠近所在闭合段的边界。"
+  },
+  {
+    "regex": "^跑道外径\\ ([\\s\\S]*?)\\ cm、宽\\ ([\\s\\S]*?)\\ cm（内径\\ ([\\s\\S]*?)\\ cm）。$",
+    "translation": "Track outer diameter {0} cm, width {1} cm (inner diameter {2} cm).",
+    "source": "跑道外径 {0} cm、宽 {1} cm（内径 {2} cm）。"
+  },
+  {
+    "regex": "^按背部毛色，([\\s\\S]*?)\\ 为深色鼠，([\\s\\S]*?)\\ 为白鼠。$",
+    "translation": "By the fur colour on the back, {0} is the dark mouse and {1} the white mouse.",
+    "source": "按背部毛色，{0} 为深色鼠，{1} 为白鼠。"
+  },
+  {
+    "regex": "^深色鼠（([\\s\\S]*?)）只有\\ ([\\s\\S]*?)%\\ 的帧检出：深色垫料上黑鼠可能漏检。可以把“小鼠毛色”改成“两只都是深色”（标准双鼠模型）重新识别一次，对比两次结果。$",
+    "translation": "The dark mouse ({0}) was detected in only {1}% of the frames: a dark mouse can be missed on dark bedding. You can set the coat colour to “Two dark mice” (the standard two-animal model), track again and compare the two results.",
+    "source": "深色鼠（{0}）只有 {1}% 的帧检出：深色垫料上黑鼠可能漏检。可以把“小鼠毛色”改成“两只都是深色”（标准双鼠模型）重新识别一次，对比两次结果。"
+  },
+  {
+    "regex": "^白鼠（([\\s\\S]*?)）只有\\ ([\\s\\S]*?)%\\ 的帧检出：两只贴在一起时白鼠更容易漏检。请在回看中检查贴身的片段。$",
+    "translation": "The white mouse ({0}) was detected in only {1}% of the frames: the white mouse is missed more often when the two touch. Check the close-contact periods in the review.",
+    "source": "白鼠（{0}）只有 {1}% 的帧检出：两只贴在一起时白鼠更容易漏检。请在回看中检查贴身的片段。"
+  },
+  {
+    "regex": "^僵直定义为身体中心速度\\ <\\ ([\\s\\S]*?)\\ cm/s\\ 持续\\ ≥\\ ([\\s\\S]*?)\\ s（De\\ Franceschi\\ 等，2016）。$",
+    "translation": "Freezing was defined as body-center speed < {0} cm/s for ≥ {1} s (De Franceschi et al., 2016).",
+    "source": "僵直定义为身体中心速度 < {0} cm/s 持续 ≥ {1} s（De Franceschi 等，2016）。"
+  },
+  {
+    "regex": "^僵直定义为运动指数\\ <\\ ([\\s\\S]*?)\\ cm/s\\ 持续\\ ≥\\ ([\\s\\S]*?)\\ s（同恐惧条件化）。$",
+    "translation": "Freezing was defined as a motion index < {0} cm/s for ≥ {1} s (as in fear conditioning).",
+    "source": "僵直定义为运动指数 < {0} cm/s 持续 ≥ {1} s（同恐惧条件化）。"
+  },
+  {
+    "regex": "^威胁区为\\ T\\ 手柄周围半径\\ ([\\s\\S]*?)\\ cm\\ 的圆，按身体中心判断。$",
+    "translation": "The threat zone was a circle of radius {0} cm around the T handle, judged by the body center.",
+    "source": "威胁区为 T 手柄周围半径 {0} cm 的圆，按身体中心判断。"
+  },
+  {
+    "regex": "^遮盖程度\\ ≥\\ ([\\s\\S]*?)\\ 的珠子数$",
+    "translation": "Marbles with a covered fraction ≥ {0}",
+    "source": "遮盖程度 ≥ {0} 的珠子数"
+  },
+  {
+    "regex": "^鼻尖距珠子边缘\\ ≤\\ ([\\s\\S]*?)\\ cm$",
+    "translation": "Nose ≤ {0} cm from a marble's edge",
+    "source": "鼻尖距珠子边缘 ≤ {0} cm"
+  },
+  {
+    "regex": "^([\\s\\S]*?)\\ 颗珠子在参照帧中和垫料反差不够，没有评分：换颜色反差更大的珠子或垫料。$",
+    "translation": "Marbles not scored because of too little contrast against the bedding in the reference frame: {0}. Use marbles or bedding with a stronger colour contrast.",
+    "source": "{0} 颗珠子在参照帧中和垫料反差不够，没有评分：换颜色反差更大的珠子或垫料。"
+  },
+  {
+    "regex": "^([\\s\\S]*?)\\ 颗珠子在一次访问中从露出直接变成完全看不见：可能是被推走了，请在回看中确认。$",
+    "translation": "Marbles that went from visible to completely hidden within a single visit: {0}. They may have been pushed away; check in the review.",
+    "source": "{0} 颗珠子在一次访问中从露出直接变成完全看不见：可能是被推走了，请在回看中确认。"
+  },
+  {
+    "regex": "^每\\ ([\\s\\S]*?)\\ s\\ 读取一次每颗珠子圆内（0\\.8\\ 倍半径）和外圈垫料（1\\.3–2\\ 倍半径）的平均亮度，遮盖程度\\ c\\ =\\ \\(m\\ −\\ m0\\)\\ ÷\\ \\(b\\ −\\ m0\\)，m0\\ 为参照帧中珠子的亮度。只用小鼠已离开该珠子\\ ≥\\ ([\\s\\S]*?)\\ s、且所有关键点距珠子中心\\ >\\ 半径\\ \\+\\ 0\\.3\\ 倍体长（尾巴按尾根之后\\ 0\\.8\\ 倍体长推算）时的画面；两次访问之间取中位数。分析结束时\\ c\\ ≥\\ ([\\s\\S]*?)\\ 的珠子记为埋住（按可见面积计；俯视时表面盖住\\ 2/3\\ 对应约\\ 11%\\ 的可见面积被盖住，所以计数可能低于肉眼按表面计的结果）。$",
+    "translation": "Every {0} s the mean brightness inside each marble (0.8 × the radius) and in the surrounding ring of bedding (1.3–2 × the radius) was read; the covered fraction was c = (m − m0) ÷ (b − m0), with m0 the marble's brightness in the reference frame. Only frames in which the mouse had left the marble for ≥ {1} s and every keypoint was > radius + 0.3 × body length from the marble center (the tail extrapolated 0.8 × body length behind the tail base) were used; the median was taken between two visits. Marbles with c ≥ {2} at the end of the analysis window were scored as buried (by visible area: seen from above, 2/3 of the surface covered corresponds to only about 11% of the visible area covered, so counts can be lower than a by-eye count based on the surface).",
+    "source": "每 {0} s 读取一次每颗珠子圆内（0.8 倍半径）和外圈垫料（1.3–2 倍半径）的平均亮度，遮盖程度 c = (m − m0) ÷ (b − m0)，m0 为参照帧中珠子的亮度。只用小鼠已离开该珠子 ≥ {1} s、且所有关键点距珠子中心 > 半径 + 0.3 倍体长（尾巴按尾根之后 0.8 倍体长推算）时的画面；两次访问之间取中位数。分析结束时 c ≥ {2} 的珠子记为埋住（按可见面积计；俯视时表面盖住 2/3 对应约 11% 的可见面积被盖住，所以计数可能低于肉眼按表面计的结果）。"
+  },
+  {
+    "regex": "^接近珠子为鼻尖距珠子边缘\\ ≤\\ ([\\s\\S]*?)\\ cm；埋珠事件为一次访问后\\ c\\ 上升\\ ≥\\ 0\\.2。$",
+    "translation": "A marble approach was the nose ≤ {0} cm from the marble's edge; a burying event was a rise in c of ≥ 0.2 after a visit.",
+    "source": "接近珠子为鼻尖距珠子边缘 ≤ {0} cm；埋珠事件为一次访问后 c 上升 ≥ 0.2。"
+  },
+  {
+    "regex": "^平台为\\ ([\\s\\S]*?)\\ ×\\ ([\\s\\S]*?)\\ cm\\ 的矩形；([\\s\\S]*?)\\ 时记为在平台上。僵直为运动指数\\ <\\ ([\\s\\S]*?)\\ cm/s\\ 持续\\ ≥\\ ([\\s\\S]*?)\\ s。声音、电击和奖励由各自设备记录；逐帧数据（on_platform、freezing\\ 列）按视频时间给出，可与设备记录对齐。$",
+    "translation": "The platform was a {0} × {1} cm rectangle. On-platform criterion: {2}. Freezing was a motion index < {3} cm/s for ≥ {4} s. Tones, shocks and rewards were logged by their own devices; the per-frame data (on_platform and freezing columns) are in video time and can be aligned with the device logs.",
+    "source": "平台为 {0} × {1} cm 的矩形；{2} 时记为在平台上。僵直为运动指数 < {3} cm/s 持续 ≥ {4} s。声音、电击和奖励由各自设备记录；逐帧数据（on_platform、freezing 列）按视频时间给出，可与设备记录对齐。"
+  },
+  {
+    "regex": "^奖励口区为奖励口周围半径\\ ([\\s\\S]*?)\\ cm\\ 的圆，按鼻尖判断。$",
+    "translation": "The reward-port zone was a circle of radius {0} cm around the reward port, judged by the nose.",
+    "source": "奖励口区为奖励口周围半径 {0} cm 的圆，按鼻尖判断。"
+  },
+  {
+    "regex": "^截止时间（([\\s\\S]*?)\\ s）内没有下台：潜伏期记为截止时间。比较组间潜伏期时请看组间页的生存分析。$",
+    "translation": "No step-down before the cut-off ({0} s): the latency is the cut-off. Compare latencies between groups with the survival analysis on the group page.",
+    "source": "截止时间（{0} s）内没有下台：潜伏期记为截止时间。比较组间潜伏期时请看组间页的生存分析。"
+  },
+  {
+    "regex": "^平台为\\ ([\\s\\S]*?)\\ ×\\ ([\\s\\S]*?)\\ cm\\ 的矩形；([\\s\\S]*?)离开平台记为下台。截止时间为分析时长\\ ([\\s\\S]*?)\\ s，截止前没有下台时潜伏期记为截止时间并标为未下台（右删失）。边缘探头为身体中心和尾根仍在平台上、鼻尖伸出平台边缘，持续\\ ≥\\ ([\\s\\S]*?)\\ s。$",
+    "translation": "The platform was a {0} × {1} cm rectangle. Step-down criterion: {2} off the platform. The cut-off was the analysis length of {3} s; without a step-down before it the latency was set to the cut-off and flagged as no step-down (right-censored). An edge head dip was the nose beyond the platform edge while the body center and tail base stayed on the platform for ≥ {4} s.",
+    "source": "平台为 {0} × {1} cm 的矩形；{2}离开平台记为下台。截止时间为分析时长 {3} s，截止前没有下台时潜伏期记为截止时间并标为未下台（右删失）。边缘探头为身体中心和尾根仍在平台上、鼻尖伸出平台边缘，持续 ≥ {4} s。"
+  },
+  {
+    "regex": "^前\\ ([\\s\\S]*?)\\ s\\ 深侧时间$",
+    "translation": "Time on the deep side, first {0} s",
+    "source": "前 {0} s 深侧时间"
+  },
+  {
+    "regex": "^前\\ ([\\s\\S]*?)\\ s\\ 浅侧时间$",
+    "translation": "Time on the shallow side, first {0} s",
+    "source": "前 {0} s 浅侧时间"
+  },
+  {
+    "regex": "^前\\ ([\\s\\S]*?)\\ s\\ 路程$",
+    "translation": "Distance, first {0} s",
+    "source": "前 {0} s 路程"
+  },
+  {
+    "regex": "^深侧为画面([\\s\\S]*?)；中性区宽度为场地长度的\\ ([\\s\\S]*?)%。所在侧按([\\s\\S]*?)判断，只有进入另一侧后才计为换边。首次选择为离开中性区后先进入的一侧。边缘探头为鼻尖伸进深侧而身体中心和尾根仍在中性区或浅侧，持续\\ ≥\\ ([\\s\\S]*?)\\ s。前\\ ([\\s\\S]*?)\\ s\\ 另行统计。$",
+    "translation": "Deep side: {0} of the image; the neutral zone's width was {1}% of the arena length. Side criterion: {2}; a side change counted only once the other side was entered. The first choice was the side entered first after leaving the neutral zone. An edge head dip was the nose over the deep side while the body center and tail base stayed in the neutral zone or on the shallow side for ≥ {3} s. The first {4} s were also reported separately.",
+    "source": "深侧为画面{0}；中性区宽度为场地长度的 {1}%。所在侧按{2}判断，只有进入另一侧后才计为换边。首次选择为离开中性区后先进入的一侧。边缘探头为鼻尖伸进深侧而身体中心和尾根仍在中性区或浅侧，持续 ≥ {3} s。前 {4} s 另行统计。"
+  },
+  {
+    "regex": "^无法读取视频：([\\s\\S]*?)$",
+    "translation": "Cannot read video: {0}",
+    "source": "无法读取视频：{0}"
+  },
+  {
+    "regex": "^([\\s\\S]*?)\\ 颗珠子在最后一次被碰之后直到分析结束都没有能看清的画面：结果取自那次之前，请在回看中核对。$",
+    "translation": "Marbles with no clear view from their last visit to the end of the analysis: {0}. Their result is from before that visit; check them in the review.",
+    "source": "{0} 颗珠子在最后一次被碰之后直到分析结束都没有能看清的画面：结果取自那次之前，请在回看中核对。"
+  },
+  {
+    "regex": "^CS\\ 时长\\ ([\\s\\S]*?)\\ s；([\\s\\S]*?)\\ 个\\ CS\\ 分析时间不足\\ 90%，未计入$",
+    "translation": "CS duration {0} s; {1} CS with less than 90 % of its time analysed left out",
+    "source": "CS 时长 {0} s；{1} 个 CS 分析时间不足 90%，未计入"
+  },
+  {
+    "regex": "^IdPhi\\ 均值\\ ([\\s\\S]*?)°\\ ·\\ ([\\s\\S]*?)\\ 次选择$",
+    "translation": "Mean IdPhi {0}° · {1} choices",
+    "source": "IdPhi 均值 {0}° · {1} 次选择"
+  },
+  {
+    "regex": "^SAR\\ ([\\s\\S]*?)\\ ·\\ AAR\\ ([\\s\\S]*?)\\ ·\\ 进入\\ ([\\s\\S]*?)\\ 次$",
+    "translation": "SAR {0} · AAR {1} · {2} entries",
+    "source": "SAR {0} · AAR {1} · 进入 {2} 次"
+  },
+  {
+    "regex": "^zIdPhi\\ ≥\\ ([\\s\\S]*?)；少于\\ ([\\s\\S]*?)\\ 次选择时不可靠，不给出数值$",
+    "translation": "zIdPhi ≥ {0}; not reliable with fewer than {1} choices, so no value is given",
+    "source": "zIdPhi ≥ {0}；少于 {1} 次选择时不可靠，不给出数值"
+  },
+  {
+    "regex": "^zIdPhi\\ 是相对本次会话的值，组间比较请优先用\\ IdPhi\\ 均值（°）；选择少于\\ ([\\s\\S]*?)\\ 次时不给出\\ VTE\\ 比例。$",
+    "translation": "zIdPhi is relative to the session, so groups are better compared with the mean IdPhi (°); the VTE fraction is not given with fewer than {0} choices.",
+    "source": "zIdPhi 是相对本次会话的值，组间比较请优先用 IdPhi 均值（°）；选择少于 {0} 次时不给出 VTE 比例。"
+  },
+  {
+    "regex": "^≥\\ 1/2：([\\s\\S]*?)\\ ·\\ ≥\\ 95%：([\\s\\S]*?)\\ ·\\ 共\\ ([\\s\\S]*?)\\ 颗可评分$",
+    "translation": "≥ 1/2: {0} · ≥ 95%: {1} · of {2} scored marbles",
+    "source": "≥ 1/2：{0} · ≥ 95%：{1} · 共 {2} 颗可评分"
+  },
+  {
+    "regex": "^只有\\ ([\\s\\S]*?)\\ 次选择（少于\\ ([\\s\\S]*?)\\ 次）：VTE\\ 比例不可靠，未给出；请看\\ IdPhi\\ 均值。$",
+    "translation": "Only {0} choices (fewer than {1}): the VTE fraction is not reliable and is not given; see the mean IdPhi.",
+    "source": "只有 {0} 次选择（少于 {1} 次）：VTE 比例不可靠，未给出；请看 IdPhi 均值。"
+  },
+  {
+    "regex": "^可见面积被盖住\\ ≥\\ ([\\s\\S]*?)%\\ 的珠子数（比肉眼按表面\\ 2/3\\ 判断更严格），分母为可评分的珠子$",
+    "translation": "Marbles with ≥ {0}% of their visible area covered (stricter than the by-eye 2/3 rule), out of the scored marbles",
+    "source": "可见面积被盖住 ≥ {0}% 的珠子数（比肉眼按表面 2/3 判断更严格），分母为可评分的珠子"
+  },
+  {
+    "regex": "^截止时间为分析时长\\ ([\\s\\S]*?)\\ s；截止前没有探入目标洞时首次潜伏期记为截止时间并标为未找到（右删失，found_target\\ =\\ 0）。$",
+    "translation": "The cut-off was the analysis length of {0} s; without a poke into the target hole before it the primary latency was set to the cut-off and flagged as not found (right-censored, found_target = 0).",
+    "source": "截止时间为分析时长 {0} s；截止前没有探入目标洞时首次潜伏期记为截止时间并标为未找到（右删失，found_target = 0）。"
+  },
+  {
+    "regex": "^截止时间（([\\s\\S]*?)\\ s）内没有探入目标洞：首次潜伏期记为截止时间。比较组间潜伏期时请看组间页的生存分析。$",
+    "translation": "No poke into the target hole before the cut-off ({0} s): the primary latency is the cut-off. Compare latencies between groups with the survival analysis on the group page.",
+    "source": "截止时间（{0} s）内没有探入目标洞：首次潜伏期记为截止时间。比较组间潜伏期时请看组间页的生存分析。"
+  },
+  {
+    "regex": "^攻击判定距离\\ ([\\s\\S]*?)\\ BL$",
+    "translation": "Attack distance {0} BL",
+    "source": "攻击判定距离 {0} BL"
+  },
+  {
+    "regex": "^时间进程从分析起点起每\\ ([\\s\\S]*?)\\ 一段，按每段的中点作图；分析时间不足一段\\ 90%\\ 的段（如最后较短的一段）不计入。$",
+    "translation": "Time courses use bins of {0} from the analysis start, plotted at the bin centres; a bin with less than 90% of its length analysed (such as a shorter last bin) is left out.",
+    "source": "时间进程从分析起点起每 {0} 一段，按每段的中点作图；分析时间不足一段 90% 的段（如最后较短的一段）不计入。"
+  },
+  {
+    "regex": "^时间（分钟），每段\\ ([\\s\\S]*?)\\ 分钟$",
+    "translation": "Time (min), {0}-min bins",
+    "source": "时间（分钟），每段 {0} 分钟"
+  },
+  {
+    "regex": "^时间（分钟），每段\\ ([\\s\\S]*?)\\ 秒$",
+    "translation": "Time (min), {0}-s bins",
+    "source": "时间（分钟），每段 {0} 秒"
+  },
+  {
+    "regex": "^时间（秒），每段\\ ([\\s\\S]*?)\\ 秒$",
+    "translation": "Time (s), {0}-s bins",
+    "source": "时间（秒），每段 {0} 秒"
+  },
+  {
+    "regex": "^最低反应速度\\ ([\\s\\S]*?)\\ ([\\s\\S]*?)/s$",
+    "translation": "Minimum response speed {0} {1}/s",
+    "source": "最低反应速度 {0} {1}/s"
+  },
+  {
+    "regex": "^每\\ ([\\s\\S]*?)\\ 一个点（画在每段中点）；阴影为\\ CS$",
+    "translation": "One point per {0} (at the bin centre); shaded: CS",
+    "source": "每 {0} 一个点（画在每段中点）；阴影为 CS"
+  },
+  {
+    "regex": "^每\\ ([\\s\\S]*?)\\ 一段；最后不满\\ 90%\\ 的一段不画$",
+    "translation": "Bins of {0}; a last bin with < 90% of its length analysed is not drawn",
+    "source": "每 {0} 一段；最后不满 90% 的一段不画"
+  },
+  {
+    "regex": "^每\\ ([\\s\\S]*?)\\ 内开放段时间所占的比例；最后不满\\ 90%\\ 的一段不画$",
+    "translation": "Open-segment share of each {0} bin; a last bin with < 90% of its length analysed is not drawn",
+    "source": "每 {0} 内开放段时间所占的比例；最后不满 90% 的一段不画"
+  },
+  {
+    "regex": "^每\\ ([\\s\\S]*?)\\ 的移动距离；最后不满\\ 90%\\ 的一段未画出$",
+    "translation": "Distance traveled per {0}; a last bin with < 90% of its length analysed is not drawn",
+    "source": "每 {0} 的移动距离；最后不满 90% 的一段未画出"
+  },
+  {
+    "regex": "^近距离阈值\\ ([\\s\\S]*?)\\ ([\\s\\S]*?)$",
+    "translation": "Close-range threshold {0} {1}",
+    "source": "近距离阈值 {0} {1}"
+  },
+  {
+    "regex": "^鼻尖首次探入目标洞；截止时间（分析时长\\ ([\\s\\S]*?)\\ s）内没有找到时记为截止时间（右删失）$",
+    "translation": "First nose entry into the target hole; when not found within the cut-off (analysis length, {0} s) it is the cut-off (right-censored)",
+    "source": "鼻尖首次探入目标洞；截止时间（分析时长 {0} s）内没有找到时记为截止时间（右删失）"
+  },
+  {
+    "regex": "^可见面积被盖住\\ ≥\\ ([\\s\\S]*?)%\\ 的珠子数，分母为可评分的珠子$",
+    "translation": "Marbles with ≥ {0}% of their visible area covered, out of the scored marbles",
+    "source": "可见面积被盖住 ≥ {0}% 的珠子数，分母为可评分的珠子"
+  },
+  {
+    "regex": "^只有\\ ([\\s\\S]*?)%\\ 的帧检出了全部\\ ([\\s\\S]*?)\\ 只鼠：指标可能偏差较大，请在回看中确认。$",
+    "translation": "All {1} mice were detected in only {0}% of frames: results may be off; check them in the review.",
+    "source": "只有 {0}% 的帧检出了全部 {1} 只鼠：指标可能偏差较大，请在回看中确认。"
+  },
+  {
+    "regex": "^每只鼠只有\\ ([\\s\\S]*?)\\ 个事件（文献建议至少\\ 10，最好\\ 20），等级不可靠。可以延长录像。$",
+    "translation": "Only {0} events per mouse (at least 10 and ideally 20 are recommended): the hierarchy is unreliable. Record for longer.",
+    "source": "每只鼠只有 {0} 个事件（文献建议至少 10，最好 20），等级不可靠。可以延长录像。"
+  },
+  {
+    "regex": "^前后半段的等级一致性只有\\ ([\\s\\S]*?)：可能是编号互换，也可能是等级在变化。$",
+    "translation": "Rank agreement between the first and second half is only {0}: either IDs swapped or the hierarchy changed.",
+    "source": "前后半段的等级一致性只有 {0}：可能是编号互换，也可能是等级在变化。"
+  },
+  {
+    "regex": "^距离和速度以体长（BL，所有鼠鼻尖到尾根距离的中位数，本视频\\ ([\\s\\S]*?)\\ ([\\s\\S]*?)）为单位。接触：两鼠身体（鼻尖–颈–身体中心–尾根折线）的最短距离\\ <\\ ([\\s\\S]*?)\\ BL；聚集团为互相接触连成一片的鼠（de\\ Chaumont\\ et\\ al\\.,\\ 2019）。$",
+    "translation": "Distances and speeds are in body lengths (BL, the median nose to tail-base distance of all mice; {0} {1} in this video). Contact: the shortest distance between two bodies (nose–neck–center–tail-base polylines) is < {2} BL; a group is a connected set of mice in contact (de Chaumont et al., 2019).",
+    "source": "距离和速度以体长（BL，所有鼠鼻尖到尾根距离的中位数，本视频 {0} {1}）为单位。接触：两鼠身体（鼻尖–颈–身体中心–尾根折线）的最短距离 < {2} BL；聚集团为互相接触连成一片的鼠（de Chaumont et al., 2019）。"
+  },
+  {
+    "regex": "^接近–回避事件：0\\.4\\ s\\ 窗口的速度下，一只鼠朝最近的鼠移动（余弦\\ >\\ 0\\.8），对方沿同方向离开（余弦\\ >\\ 0\\.5），间距\\ 0\\.3–([\\s\\S]*?)\\ BL，两鼠速度\\ >\\ ([\\s\\S]*?)\\ BL/s，持续\\ ≥\\ ([\\s\\S]*?)\\ s。规则来自大鼠长期追踪研究（2408\\.08945），按体长换算，未在小鼠上用人工评分验证。$",
+    "translation": "Approach–avoid event: with velocities over a 0.4 s window, one mouse moves toward its nearest neighbour (cosine > 0.8) while that neighbour moves away along the same line (cosine > 0.5), 0.3–{0} BL apart, both faster than {1} BL/s, lasting ≥ {2} s. The rule comes from a long-term rat tracking study (arXiv 2408.08945), scaled to body lengths, and has not been validated against manual scoring in mice.",
+    "source": "接近–回避事件：0.4 s 窗口的速度下，一只鼠朝最近的鼠移动（余弦 > 0.8），对方沿同方向离开（余弦 > 0.5），间距 0.3–{0} BL，两鼠速度 > {1} BL/s，持续 ≥ {2} s。规则来自大鼠长期追踪研究（2408.08945），按体长换算，未在小鼠上用人工评分验证。"
+  },
+  {
+    "regex": "^四角区为场地四个角上的正方形，边长为场地短边的\\ ([\\s\\S]*?)%（([\\s\\S]*?)\\ ([\\s\\S]*?)），按身体中心判断；四角区时间为身体中心在任一角内的总时间。$",
+    "translation": "Corner zones are the four squares in the corners of the arena, side {0}% of the shorter side ({1} {2}), based on body center; corner time is the total time with the body center in any corner.",
+    "source": "四角区为场地四个角上的正方形，边长为场地短边的 {0}%（{1} {2}），按身体中心判断；四角区时间为身体中心在任一角内的总时间。"
+  },
+  {
+    "regex": "^四角区设置得比中央区留出的边缘更宽，已缩小到场地短边的\\ ([\\s\\S]*?)%，避免与中央区重叠。$",
+    "translation": "The corner zones were set wider than the border left by the center zone and were reduced to {0}% of the shorter side so that they do not overlap it.",
+    "source": "四角区设置得比中央区留出的边缘更宽，已缩小到场地短边的 {0}%，避免与中央区重叠。"
+  }
+]

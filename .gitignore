@@ -1,0 +1,35 @@
+# Build output
+bin/
+obj/
+.vs/
+*.user
+engine/.build/
+engine/.swiftpm/
+
+# Packages come from nuget.org. A machine-specific NuGet.config (an offline feed, say) stays local.
+NuGet.config
+
+# Model files are published as release assets, not kept in the source
+models/*
+!models/README_CN.md
+!models/README.md
+
+# Runs, videos and logs
+runs/
+*.mp4
+*.mov
+*.m4v
+*.avi
+*.mkv
+*.mpt
+startup-error.log
+
+# Python and notebooks
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Operating systems
+.DS_Store
+Thumbs.db
+desktop.ini

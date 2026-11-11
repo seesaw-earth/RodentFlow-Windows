@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    RodentFlow.Cli — the whole pipeline without a window: probe a video, run the model over it,
+    analyse the result. This is the first thing to get working on a new machine, because it exercises
+    the engine, the model runtime and the video reader with nothing else in the way.
+  -->
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <AssemblyName>rodentflow</AssemblyName>
+    <RootNamespace>RodentFlow.Cli</RootNamespace>
+    <InvariantGlobalization>true</InvariantGlobalization>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RodentFlow.Core\RodentFlow.Core.csproj" />
+    <ProjectReference Include="..\RodentFlow.Engine\RodentFlow.Engine.csproj" />
+    <ProjectReference Include="..\RodentFlow.Onnx\RodentFlow.Onnx.csproj" />
+  </ItemGroup>
+
+</Project>

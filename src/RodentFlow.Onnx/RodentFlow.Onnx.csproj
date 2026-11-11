@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    RodentFlow.Onnx — the pose models, run with ONNX Runtime. Kept to one small file so that the
+    rest of the app builds and can be checked without this NuGet package.
+
+    GPU: Microsoft.ML.OnnxRuntime.DirectML, which also contains the processor (CPU) provider, so one
+    package covers both. DirectML runs on every DirectX 12 graphics card (NVIDIA, AMD, Intel) from
+    Windows 10 1903 on. It is in sustained engineering at Microsoft (supported, no new features; Windows ML
+    is the newer route but chooses hardware by itself only from Windows 11 24H2), and its last release is
+    1.24.4 — below the CPU package's 1.31.1 the models were exported next to. The models are opset 17
+    (RodentFlow_Export_ONNX_All_Models.ipynb chose it for DirectML, which reads up to opset 20), and this
+    file only uses ONNX Runtime calls that are the same in both versions. Raise it deliberately.
+  -->
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <AssemblyName>RodentFlow.Onnx</AssemblyName>
+    <RootNamespace>RodentFlow.Onnx</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ML.OnnxRuntime.DirectML" Version="1.24.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RodentFlow.Core\RodentFlow.Core.csproj" />
+    <ProjectReference Include="..\RodentFlow.Engine\RodentFlow.Engine.csproj" />
+  </ItemGroup>
+
+</Project>

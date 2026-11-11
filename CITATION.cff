@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use RodentFlow for Windows in your research, please cite it as below."
+title: "RodentFlow for Windows: pose tracking and behaviour analysis of mice on Windows"
+type: software
+authors:
+  - family-names: "Shi"
+    given-names: "Ziqing"
+license: AGPL-3.0-only
+repository-code: "https://github.com/seesaw-earth/RodentFlow-Windows"
+url: "https://seesaw-earth.github.io/RodentFlow/"
+keywords:
+  - rodent behavior
+  - pose estimation
+  - video tracking
+  - behavioral neuroscience
+  - Windows

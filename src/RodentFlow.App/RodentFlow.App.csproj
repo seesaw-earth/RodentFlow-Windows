@@ -1,0 +1,68 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    RodentFlow.App - the window. Needs Windows to build.
+
+    Windows App SDK 2.6.5 was the current stable release when this was written; WinUI runs on
+    Windows 10 version 1809 and later, which sets TargetPlatformMinVersion below.
+
+    Self-contained and unpackaged: one folder you can copy to a lab machine, no installer and no
+    Windows App Runtime to install first. That combination needs a single RuntimeIdentifier, so x64
+    is set here; change it to win-arm64 for an ARM machine.
+  -->
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
+    <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+    <RootNamespace>RodentFlow.App</RootNamespace>
+    <AssemblyName>RodentFlow</AssemblyName>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <Platforms>x64</Platforms>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <UseWinUI>true</UseWinUI>
+    <EnableMsixTooling>true</EnableMsixTooling>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <WindowsPackageType>None</WindowsPackageType>
+    <WindowsAppSDKSelfContained>true</WindowsAppSDKSelfContained>
+    <SelfContained>true</SelfContained>
+  </PropertyGroup>
+
+  <!--
+    Win2D draws the result figures (the role SwiftUI Canvas / CoreGraphics play on the Mac) and renders
+    them off screen at 300 / 600 dpi for files. 1.4.0 needs Microsoft.WindowsAppSDK.WinUI 1.8 or later,
+    which 2.6.5 satisfies; PowerToys ships the same pair. Win2D is native code, so the app must target
+    x64 or arm64, never AnyCPU (it already does: Platforms / RuntimeIdentifier above).
+  -->
+  <ItemGroup>
+    <PackageReference Include="Microsoft.WindowsAppSDK" Version="2.6.5" />
+    <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.*" />
+    <PackageReference Include="Microsoft.Graphics.Win2D" Version="1.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RodentFlow.Core\RodentFlow.Core.csproj" />
+    <ProjectReference Include="..\RodentFlow.Engine\RodentFlow.Engine.csproj" />
+    <ProjectReference Include="..\RodentFlow.Onnx\RodentFlow.Onnx.csproj" />
+  </ItemGroup>
+
+  <!--
+    The engine library, the two text files it reads through Bundle.main, and the models.
+    Swift 6.4 writes the product under .build/out/Products/<configuration>-<triple>/; older
+    toolchains used .build/<configuration>/. Both are looked for, newest layout first.
+  -->
+  <PropertyGroup>
+    <RodentFlowEngineDll>..\..\engine\.build\out\Products\Release-windows-x86_64\RodentFlowABI.dll</RodentFlowEngineDll>
+    <RodentFlowEngineDll Condition="!Exists('$(RodentFlowEngineDll)')">..\..\engine\.build\release\RodentFlowABI.dll</RodentFlowEngineDll>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="$(RodentFlowEngineDll)" Condition="Exists('$(RodentFlowEngineDll)')"
+          CopyToOutputDirectory="PreserveNewest" Link="RodentFlowABI.dll" />
+    <None Include="..\..\engine\Resources\*.json" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="..\..\models\*.onnx" CopyToOutputDirectory="PreserveNewest"
+          Link="models\%(Filename)%(Extension)" />
+  </ItemGroup>
+
+</Project>
