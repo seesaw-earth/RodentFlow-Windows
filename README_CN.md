@@ -195,3 +195,7 @@ python check\check_cs_members.py                # 项目内 C# 引用：类型.�
 - `docs/ARCHITECTURE_CN.md` — 为什么这样分界，ABI 长什么样
 - `docs/STATUS_CN.md` — 逐项的完成度、验证状况和已知差异
 - `engine/include/rodentflow.h` — C 接口的参考副本
+
+## 隐私与支持
+
+RodentFlow 完全在你的电脑上运行：没有联网代码、没有账号、没有统计分析，不收集任何数据，见[隐私政策](PRIVACY.md)。问题和建议请提交 [issue](https://github.com/seesaw-earth/RodentFlow-Windows/issues)，见 [SUPPORT.md](SUPPORT.md)。

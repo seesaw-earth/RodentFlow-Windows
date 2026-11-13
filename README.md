@@ -118,6 +118,12 @@ The static checks: `check_abi.py` (every engine call in the C interface against 
 `PoseCalibrationEditor.swift`; needs the RodentFlow app source). `check/winui_stub/` compiled the early
 window against stand-in types and is out of date; a real Windows build is the reference.
 
+## Privacy and support
+
+RodentFlow runs entirely on your PC: it has no network code, no account and no analytics, and
+collects no data. See the [privacy policy](PRIVACY.md). Questions and problems:
+[issues](https://github.com/seesaw-earth/RodentFlow-Windows/issues); see [SUPPORT.md](SUPPORT.md).
+
 ## Licence
 
 Copyright © 2026 Ziqing Shi. Licensed under the GNU Affero General Public License v3.0 only
